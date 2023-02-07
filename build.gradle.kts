@@ -10,7 +10,6 @@ buildscript {
 }
 
 plugins {
-    kotlin("jvm") version "1.5.10"
     java
     idea
     id("net.minecraftforge.gradle") version "5.1.+"
@@ -167,7 +166,7 @@ java {
 
 tasks {
     jar {
-        finalizedBy("remapJar")
+        finalizedBy("reobfJar")
         manifest {
             attributes(mapOf(
                     "MixinConfigs" to "ae2wtlib.mixins.json"
